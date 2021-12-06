@@ -17,7 +17,15 @@ module.exports = {
       './src/style.scss'
     ]
   },
-  mode: "production",
+  mode: "development",
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
+    compress: true,
+    open: true,
+    watchFiles: ['src/**/*'],
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[chunkhash].js"
