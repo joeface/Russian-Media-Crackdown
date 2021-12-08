@@ -4,6 +4,7 @@ const nodeExternals = require("webpack-node-externals");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInjector = require('html-webpack-injector');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 const {
   CleanWebpackPlugin
 } = require('clean-webpack-plugin');
@@ -23,7 +24,7 @@ module.exports = {
       directory: path.join(__dirname, 'public'),
     },
     compress: true,
-    open: true,
+    //open: true,
     watchFiles: ['src/**/*'],
   },
   output: {
@@ -43,38 +44,45 @@ module.exports = {
     }),
   ],
   module: {
-    rules: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: "babel-loader"
-    }, {
-      test: /\.(woff2?|ttf|otf|eot|svg)$/,
-      exclude: /node_modules/,
-      loader: 'file-loader',
-      options: {
-        name: '[name].[ext]',
-      },
-
-    },
-    {
-      test: /\.(png|svg|jpg|gif)$/,
-      exclude: /node_modules/,
-      loader: 'file-loader',
-
-    },
-    {
-      test: /\.scss$/,
-      use: [
-        {
-          loader: MiniCssExtractPlugin.loader,
-          options: {
-            esModule: false,
-          },
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader"
+      }, {
+        test: /\.(woff2?|ttf|otf|eot)$/,
+        exclude: /node_modules/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
         },
-        "css-loader",
-        "sass-loader"
-      ]
-    }
+
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+      /*
+     {
+       test: /\.(png|svg|jpg|gif)$/,
+       exclude: /node_modules/,
+       loader: 'file-loader',
+
+     },*/
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: false,
+            },
+          },
+          "css-loader",
+          "resolve-url-loader",
+          "sass-loader"
+        ]
+      }
     ]
   },
 };

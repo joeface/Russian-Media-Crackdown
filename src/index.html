@@ -5,41 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ЗГЦ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 
 <body>
 
 
-    <div id="main-grid">
-
-        <div class="logo"></div>
-        <div>2011</div>
-        <div>2012</div>
-        <div>2013</div>
-        <div>2014</div>
-        <div>2015</div>
-        <div>2016</div>
-        <div>2017</div>
-        <div>2018</div>
-        <div>2019</div>
-        <div>2020</div>
-        <div>2021</div>
-
-        <div class="logo"></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-
-    </div>
+    <!-- CONTENT START -->
+    <%= require('html-loader!./grid.html').default %>
+        <!-- CONTENT END -->
 
 
 </body>
