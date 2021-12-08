@@ -26,19 +26,23 @@ body {
 #grid-legend {
     max-width: 600px;
     padding: 0 6px;
+    margin-bottom: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
 
     > div {
         font-size: .6rem;
         line-height: 1.1em;
         text-align: center;
-        margin: 2px;
+
         padding: 3px 4px;
         background-color: var(--color1);
         color: #252626;
         &.color2 {
             background-color: var(--color2);
+            padding-top: 8px;
         }
         &.color3 {
             background-color: var(--color3);
@@ -53,10 +57,12 @@ body {
         &.color6 {
             background-color: var(--color6);
             color: #fafafa;
+            padding-top: 8px;
         }
         &.color7 {
             background-color: var(--color7);
             color: #fafafa;
+            padding-top: 8px;
         }
     }
 }
