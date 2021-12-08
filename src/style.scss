@@ -25,7 +25,7 @@ body {
         background-color: #262626;
         color: #fafafa;
         font-size: .8rem;
-        padding: 2px 4px;
+        padding: 4px 4px;
         text-align: center;
     }
     .logo {
@@ -181,6 +181,18 @@ body {
         }
         &.white-right {
             border-right: 1px solid #63697d;
+        }
+        &.fix-corner {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 1px;
+                height: 1px;
+                background: #63697d;
+            }
         }
     }
 }
