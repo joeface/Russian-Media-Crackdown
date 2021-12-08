@@ -24,7 +24,7 @@ body {
 }
 
 #grid-legend {
-    //width: 360px;
+    max-width: 600px;
     padding: 0 6px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
