@@ -8,17 +8,22 @@ body {
     padding: 0;
 }
 #main-grid {
+    max-width: 482px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     border-bottom: 1px solid #9ea2b2;
+    border-left: 1px solid #9ea2b2;
     .header {
         background-color: #262626;
         color: #fafafa;
         font-size: .7rem;
         padding: 2px;
+        text-align: center;
     }
     .logo {
         min-width: 80px;
+        max-width: 120px;
         background-color: #d5dae7;
         background-repeat: no-repeat;
         background-size: 60%;
@@ -133,6 +138,7 @@ body {
         background-color: var(--color);
         border-top: 1px solid #bec2d1;
         border-right: 1px solid #bec2d1;
+
         &.color-1 {
             --color: #fcf2ca;
         }
