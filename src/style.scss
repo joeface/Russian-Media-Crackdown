@@ -7,23 +7,30 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.grid-container {
+    overflow-x: scroll;
+    margin: 6px;
+}
+
 #main-grid {
-    max-width: 482px;
+    width: 600px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     border-bottom: 1px solid #9ea2b2;
     border-left: 1px solid #9ea2b2;
+
     .header {
         background-color: #262626;
         color: #fafafa;
-        font-size: .7rem;
-        padding: 2px;
+        font-size: .8rem;
+        padding: 2px 4px;
         text-align: center;
     }
     .logo {
-        min-width: 80px;
-        max-width: 120px;
+        min-width: 120px;
+        max-width: 160px;
         background-color: #d5dae7;
         background-repeat: no-repeat;
         background-size: 60%;
@@ -134,7 +141,7 @@ body {
     }
     .year {
         padding: 2px;
-        height: 14px;
+        height: 20px;
         background-color: var(--color);
         border-top: 1px solid #bec2d1;
         border-right: 1px solid #bec2d1;
@@ -163,13 +170,13 @@ body {
 
         &.white {
             border: none;
-            height: 15px;
+            height: 21px;
             //border-top: 1px solid #fff;
             //border-right: 1px solid #fff;
             --color: #fff
         }
         &.white-top {
-            height: 14px;
+            height: 20px;
             border-top: 1px solid #63697d;
         }
         &.white-right {
