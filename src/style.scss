@@ -68,7 +68,7 @@ body {
 
 #main-grid {
     width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 10px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     border-bottom: 1px solid #9ea2b2;
