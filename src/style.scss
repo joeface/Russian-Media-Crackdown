@@ -36,11 +36,12 @@ body {
         font-size: .6rem;
         line-height: 1.1em;
         text-align: center;
-        
+        opacity: .9;
 
         padding: 3px 4px;
         background-color: var(--color1);
         color: #252626;
+
         &.color2 {
             background-color: var(--color2);
         }
@@ -80,6 +81,7 @@ body {
         padding: 4px 4px;
         text-align: center;
     }
+
     .logo {
         min-width: 120px;
         max-width: 160px;
@@ -191,12 +193,29 @@ body {
             background-image: url(./images/logo/vtimes.png);
         }
     }
+
     .year {
         padding: 2px;
         height: 20px;
         background-color: var(--color);
         border-top: 1px solid #bec2d1;
         border-right: 1px solid #bec2d1;
+
+        &.color-1,&.color-2,&.color-3,&.color-4,&.color-5,&.color-6,&.color-7 {
+            cursor:pointer;
+            opacity: .9;
+    
+            &:hover {
+                opacity: 1;
+                //transform: ;
+                transform: scale(1.2) translateY(1px);
+                border: none;
+                z-index: 1000;
+                -webkit-box-shadow: 1px 1px 5px 0px rgba(38,38,38,0.44); 
+                box-shadow: 1px 1px 5px 0px rgba(38,38,38,0.44);
+            }
+        }
+        
 
         &.color-1 {
             --color: var(--color1);
