@@ -202,6 +202,7 @@ body {
     }
 
     .year {
+        min-width: 0;
         padding: 2px;
         height: 20px;
         background-color: var(--color);
