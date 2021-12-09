@@ -9,6 +9,7 @@
     --color5: #d62d2d;
     --color6: #8c1b1b;
     --color7: #252626;
+    --colorNone: #ccc;
 
 }
 
@@ -42,25 +43,30 @@ body {
         background-color: var(--color1);
         color: #252626;
 
-        &.color2 {
+        &.color-2 {
             background-color: var(--color2);
         }
-        &.color3 {
+        &.color-3 {
             background-color: var(--color3);
         }
-        &.color4 {
+        &.color-4 {
             background-color: var(--color4);
         }
-        &.color5 {
+        &.color-5 {
             background-color: var(--color5);
             color: #fafafa;
         }
-        &.color6 {
+        &.color-6 {
             background-color: var(--color6);
             color: #fafafa;
         }
-        &.color7 {
+        &.color-7 {
             background-color: var(--color7);
+            color: #fafafa;
+        }
+
+        &.color-none {
+            background-color: var(--colorNone);
             color: #fafafa;
         }
     }
@@ -237,13 +243,17 @@ body {
         &.color-7 {
             --color: var(--color7);
         }
+        &.color-none {
+            --color: var(--colorNone);
+        }
+
 
         &.white {
             border: none;
-            height: 21px;
+            height: 21px;   
             //border-top: 1px solid #fff;
             //border-right: 1px solid #fff;
-            --color: #fff
+            --color: var(--colorNone);
         }
         &.white-top {
             height: 20px;
