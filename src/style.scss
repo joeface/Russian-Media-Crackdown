@@ -207,8 +207,7 @@ body {
     
             &:hover {
                 opacity: 1;
-                //transform: ;
-                transform: scale(1.2) translateY(1px);
+                transform: scale(1.1) translateY(1px);
                 border: none;
                 z-index: 1000;
                 -webkit-box-shadow: 1px 1px 5px 0px rgba(38,38,38,0.44); 
@@ -267,3 +266,5 @@ body {
         }
     }
 }
+
+@import '_tooltip';
