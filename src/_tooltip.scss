@@ -90,14 +90,15 @@
   
   /* Tooltip */
   [data-tooltip-location="left"]:before {
-    transform: translate(-5px, 97%) scale(0.5);
+    transform: translate(20%, 104%) scale(0.5);
   }
   [data-tooltip-location="left"]:hover:before {
-    transform: translate(-5px, 97%) scale(1);
+    transform: translate(20%, 104%) scale(1);
   }
   
   /* Arrow */
   [data-tooltip-location="left"]:after {
+      display: none;
     border-width: 5px 0px 5px 5px;
     border-color: transparent transparent transparent #262626;
     transform-origin: left;
@@ -117,13 +118,14 @@
   }
   
   [data-tooltip-location="right"]:before {
-    transform: translate(5px, 97%) scale(0.5);
+    transform: translate(-20%, 105%) scale(0.5);
   }
   [data-tooltip-location="right"]:hover:before {
-    transform: translate(5px, 97%) scale(1);
+    transform: translate(-20%, 105%) scale(1);
   }
   
   [data-tooltip-location="right"]:after {
+      display: none;
     border-width: 5px 5px 5px 0px;
     border-color: transparent #262626 transparent transparent;
     transform-origin: right;
@@ -143,13 +145,14 @@
   }
   
   [data-tooltip-location="bottom"]:before {
-    transform: translate(-50%, 5px) scale(0.5);
+    transform: translate(-50%, 0) scale(0.5);
   }
   [data-tooltip-location="bottom"]:hover:before {
-    transform: translate(-50%, 5px) scale(1);
+    transform: translate(-50%, 0) scale(1);
   }
   
   [data-tooltip-location="bottom"]:after {
+      display: none;
     border-width: 0px 5px 5px 5px;
     border-color: transparent transparent #262626 transparent;
     transform-origin: bottom;
