@@ -21,7 +21,7 @@
     content: attr(data-tooltip);
     padding: 8px 14px;
     min-width: 60px;
-    max-width: 280px;
+    max-width: 240px;
     width: max-content;
     width: -moz-max-content;
     //border-radius: 4px;
@@ -90,10 +90,10 @@
   
   /* Tooltip */
   [data-tooltip-location="left"]:before {
-    transform: translate(-5px, 50%) scale(0.5);
+    transform: translate(-5px, 97%) scale(0.5);
   }
   [data-tooltip-location="left"]:hover:before {
-    transform: translate(-5px, 50%) scale(1);
+    transform: translate(-5px, 97%) scale(1);
   }
   
   /* Arrow */
@@ -117,10 +117,10 @@
   }
   
   [data-tooltip-location="right"]:before {
-    transform: translate(5px, 50%) scale(0.5);
+    transform: translate(5px, 97%) scale(0.5);
   }
   [data-tooltip-location="right"]:hover:before {
-    transform: translate(5px, 50%) scale(1);
+    transform: translate(5px, 97%) scale(1);
   }
   
   [data-tooltip-location="right"]:after {
