@@ -1,0 +1,96 @@
+$text-color: rgba(50, 50, 50, .9);
+$hint-border: rgba(120, 120, 120, .2);
+$hint-color: rgba(50, 50, 50, .9);
+$hint-icon-color: rgba(50, 50, 50, .3);
+$hint-icon-active: rgba(45, 25, 150, .9);
+
+$timeline-line-color: #f0f0f0;
+$toggleable-background: #f4f4f4;
+
+@mixin hint-close-icon-color($color) {
+	background-image: url("data:image/svg+xml,%3Csvg width='1em' height='1em' viewBox='0 0 20 20' fill='"+ $color + "' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M5.646 5.646a.5.5 0 000 .708l8 8a.5.5 0 00.708-.708l-8-8a.5.5 0 00-.708 0z' clip-rule='evenodd'/%3E%3Cpath fill-rule='evenodd' d='M14.354 5.646a.5.5 0 010 .708l-8 8a.5.5 0 01-.708-.708l8-8a.5.5 0 01.708 0z' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+#nrtk-hint-container {
+	z-index: 800;
+	position: absolute;
+	padding: 12px 16px;
+	//min-width: 80px;
+	max-width: 400px;
+	top: -1000px;
+	left: -1000px;
+	margin: 4px 20px;
+
+	background: $toggleable-background;
+	border: 1px solid $hint-border;
+	//border-radius: 6px;
+	color: $hint-color;
+
+	font-size: .8rem;
+	line-height: 1.3em;
+
+	-webkit-box-shadow: 0px 2px 8px -2px $hint-border;
+	-moz-box-shadow: 0px 2px 8px -2px $hint-border;
+	box-shadow: 0px 2px 8px -2px $hint-border;
+
+    strong {
+        font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 8px;
+    }
+
+	p {
+		font-size: .8rem;
+		line-height: 1.4em;
+		margin: 0.5rem 0;
+
+		strong {
+			font-size: 1.2rem;
+		}
+	}
+
+	&:not(.hint-short) {
+		&:hover {
+			&:before {
+				opacity: 1;
+			}
+		}
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 18px;
+			height: 18px;
+			border-radius: 6px;
+			cursor: pointer;
+			background-size: 22px 22px;
+			background-position: center;
+			background-repeat: no-repeat;
+			@include hint-close-icon-color($hint-icon-color);
+			opacity: 0.5;
+
+			//background-color: #ff0000;
+		}
+	}
+}
+
+@media (max-width: 575.98px) {
+
+    #nrtk-hint-container {
+        max-width: 320px;
+        margin: 0 14px;
+
+        &:not(.hint-short) {
+            left: auto !important;
+        }
+
+        &.hint-right {
+            left: auto !important;
+            right: 0;
+        }
+    }
+
+}
