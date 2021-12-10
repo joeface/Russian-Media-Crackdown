@@ -18,7 +18,7 @@ export default class HintControl {
 		var c = this;
 
 		document.addEventListener("click", function (e) {
-			if ((!e.target.classList.contains('year') && !e.target.parentNode.classList.contains('year')) && (e.target.parentNode && e.target.parentNode.id !== 'nrtk-hint-container')) {
+			if (!e.target.getAttribute('data-tooltip') || ((!e.target.classList.contains('year') && !e.target.parentNode.classList.contains('year')) && (e.target.parentNode && e.target.parentNode.id !== 'nrtk-hint-container'))) {
 				c.hideHint();
 			}
 		}, false);
@@ -52,8 +52,15 @@ export default class HintControl {
 
 	showHint(obj) {
 		const bcr = obj.getBoundingClientRect();
+		let leftOffset;
 
-		this.hintContainer.style.left = (bcr.left - 20) + 'px';
+		if (bcr.left > document.body.clientWidth / 2) {
+			leftOffset = document.body.clientWidth / 2 - 100;
+		} else {
+			leftOffset = bcr.left - 20;
+		}
+
+		this.hintContainer.style.left = leftOffset + 'px';
 		this.hintContainer.style.top = (bcr.top + 30) + 'px';
 		//this.hintContainer.style.top = (obj.offsetParent.offsetTop + obj.offsetParent.offsetHeight) + 'px';
 
