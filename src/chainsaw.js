@@ -61,7 +61,7 @@ export default class ChainsawControl {
 		}
 
 		this.hintContainer.style.left = leftOffset + 'px';
-		this.hintContainer.style.top = (bcr.top + 30) + 'px';
+		this.hintContainer.style.top = (obj.offsetTop + 30) + 'px';
 
 		this.hintContainer.innerHTML = obj.getAttribute('data-tooltip');
 
