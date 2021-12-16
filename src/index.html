@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ЗГЦ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link type="text/css" href="https://media.newsroomtoolkit.com/assets/dist/currenttime.latest.css" rel="stylesheet" />
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 
 <body ontouchstart="">
+
+    <script>
+        var STORY_CONFIG = {
+            is_gallery_enabled: true,
+            is_show_sharing: true,
+        };
+    </script>
 
     <!-- CONTENT START -->
     <%= require('html-loader!./grid.html').default %>
@@ -32,6 +38,7 @@
 
 </body>
 
+<script type="text/javascript" src="https://media.newsroomtoolkit.com/assets/dist/frontend.latest.js"></script>
 <script src="<%=htmlWebpackPlugin.files.js %>"></script>
 
 </html>

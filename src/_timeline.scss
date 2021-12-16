@@ -1,47 +1,19 @@
 
+.timeline {
+    max-width: 600px;
+    padding: 0 6px;
+    margin: 0 auto 20px;
+}
 .container.event {
     padding-bottom: 4rem;
-    //padding-left: 55px;
-    //border-left: 1px solid #eaeaea;
-/*
-    &.last {
-        border-left: none;
-
-        &::before {
-            margin-left: -71px;
-        }
-    }
-
-    &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        margin-top: -4px;
-        margin-left: -71px;
-        border-radius: 100%;
-        background-color: var(--pink);
-        border: 8px solid var(--bg-color);  
-    }
-
-    &.event-0, &.last {
-        &::before {
-            margin-top: 14px;
-        }
-
-        .date {
-            margin-top: -6px;
-        }
-    }
-*/
+    
     .date {
-        font-weight: 700;
+        font-weight: 400;
         font-size: 2.4rem;
         color: #fafafa;
-        background-color: var(--pink);
-        padding-top: 4px;
-        padding-bottom: 4px;
+        background-color: var(--plum);
+        padding: 6px 15px;
+        line-height: 1;
         text-transform: uppercase;
     }
 
@@ -65,52 +37,24 @@
 
 @media (max-width: 575.98px) {
 
-    section.timeline {
-        .intro {
-            padding-top: 0;
-            p {
-                font-size: 1.3rem;
-            }
-        }
-    }
-
     .container.event {
         padding: 0 15px 1rem;
-        //padding-left: 17px;
-        //margin-left: 16px;
-        //width: calc(100% - 50px);
+
         .date {
-            margin: 1rem -15px;
-            padding-left: 15px;
-            padding-right: 15px;
+            margin: 1rem -20px;
+           
             position: -webkit-sticky; /* Safari */
             position: sticky;
             top: 0;
             font-weight: 400;
         }
         .event-content {
+            h3 {
+                font-size: 1.4rem;
+            }
             p {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
-        }
-        &.last {
-    
-            &::before {
-                margin-left: -33px;
-            }
-        }
-        &.story-continues {
-    
-            &::before {
-                margin-top: -11px;
-                margin-left: -33px;
-            }
-        }
-
-        &::before {
-
-            margin-top: 12px;
-            margin-left: -33px;
         }
     
     }

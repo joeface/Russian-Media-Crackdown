@@ -1,4 +1,4 @@
-export default class HintControl {
+export default class ChainsawControl {
 
 	constructor() {
 
@@ -18,7 +18,7 @@ export default class HintControl {
 		var c = this;
 
 		document.addEventListener("click", function (e) {
-			if (!e.target.getAttribute('data-tooltip') || ((!e.target.classList.contains('year') && !e.target.parentNode.classList.contains('year')) && (e.target.parentNode && e.target.parentNode.id !== 'nrtk-hint-container'))) {
+			if (!e.target.getAttribute('data-tooltip') || ((!e.target.classList.contains('year') && !e.target.parentNode.classList.contains('year')) && (e.target.parentNode && e.target.parentNode.id !== 'nrtk-chainsaw-container'))) {
 				c.hideHint();
 			}
 		}, false);
@@ -26,7 +26,7 @@ export default class HintControl {
 	}
 
 	toggleHint(e) {
-
+		console.log('click')
 		if (!this.hintContainer.classList.contains('visible')) {
 			this.showHint(e.currentTarget);
 		} else if (this.hintContainer.classList.contains('visible') && e.currentTarget.classList.contains('active')) {
@@ -42,11 +42,11 @@ export default class HintControl {
 
 	createHintContainer() {
 
-		if (!document.getElementById('nrtk-hint-container')) {
-			document.getElementsByTagName("body")[0].insertAdjacentHTML('beforeEnd', '<div id="nrtk-hint-container"></div>');
+		if (!document.getElementById('nrtk-chainsaw-container')) {
+			document.getElementsByTagName("body")[0].insertAdjacentHTML('beforeEnd', '<div id="nrtk-chainsaw-container"></div>');
 		}
 
-		this.hintContainer = document.getElementById('nrtk-hint-container');
+		this.hintContainer = document.getElementById('nrtk-chainsaw-container');
 
 	}
 
@@ -62,7 +62,6 @@ export default class HintControl {
 
 		this.hintContainer.style.left = leftOffset + 'px';
 		this.hintContainer.style.top = (bcr.top + 30) + 'px';
-		//this.hintContainer.style.top = (obj.offsetParent.offsetTop + obj.offsetParent.offsetHeight) + 'px';
 
 		this.hintContainer.innerHTML = obj.getAttribute('data-tooltip');
 

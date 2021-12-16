@@ -1,3 +1,3 @@
-import HintControl from './hint';
+import ChainsawControl from './chainsaw';
 
-const hints = new HintControl();
+const chainsaw = new ChainsawControl();

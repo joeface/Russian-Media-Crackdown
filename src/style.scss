@@ -35,8 +35,7 @@ body {
 }
 
 .grid-container {
-    overflow-y: auto;
-    overflow-x: scroll;
+    overflow:hidden;
     max-height: 100%;
     margin: 6px;
 }
@@ -51,12 +50,12 @@ body {
     grid-row-gap: 4px;
 
     > div {
-        font-size: .6rem;
+        font-size: .8rem;
         line-height: 1.1em;
         text-align: center;
         opacity: .9;
 
-        padding: 3px 4px;
+        padding: 6px 4px;
         background-color: var(--color1);
         color: #252626;
 
@@ -295,7 +294,14 @@ body {
     }
 }
 
-@import '_hint';
+@media (max-width: 575.98px) {
+
+    .grid-container {
+        overflow-y: auto;
+        overflow-x: scroll;
+    }
+
+}
+
+@import '_chainsaw';
 @import '_timeline';
-//@import '_tooltip';
-//@import '_tooltip-mobile';
