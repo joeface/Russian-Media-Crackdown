@@ -34,8 +34,13 @@ body {
     padding: 0;
 }
 
+.introduction {
+    max-width: 600px;
+    padding: 0 15px;
+}
+
 .grid-container {
-    overflow:hidden;
+    overflow: hidden;
     max-height: 100%;
     margin: 6px;
 }
