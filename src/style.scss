@@ -11,6 +11,11 @@
     --color7: #252626;
     --colorNone: #ccc;
 
+    --pink: #f05;
+    --plum: #2d1996;
+    --bg-color: #fafafa;
+    --font-color: #303030;
+
 }
 
 html,
@@ -23,6 +28,8 @@ body {
 
 body {
     font-family: var(--font);
+    color: var(--font-color);
+    background-color: var(--bg-color);
     margin: 0;
     padding: 0;
 }
@@ -146,7 +153,7 @@ body {
 
         &.grani {
             background-image: url(./images/logo/grani.png);
-            background-size: 50%;
+            background-size: 45%;
         }
 
         &.svoboda {
@@ -289,5 +296,6 @@ body {
 }
 
 @import '_hint';
+@import '_timeline';
 //@import '_tooltip';
 //@import '_tooltip-mobile';
