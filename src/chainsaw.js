@@ -10,10 +10,18 @@ export default class ChainsawControl {
 
 	bindEvents() {
 
-		var hints = document.querySelectorAll('.year[data-tooltip]');
+		var hints = document.querySelectorAll('.year');
+
 		for (let i = 0; i < hints.length; i++) {
-			hints[i].addEventListener("click", this.toggleHint.bind(this), false);
+
+			if (null !== hints[i].getAttribute('data-tooltip')) {
+				hints[i].addEventListener("mouseenter", this.toggleHint.bind(this), false);
+			}
+			hints[i].addEventListener("mouseover", this.hideHint.bind(this), false);
+
 		}
+
+		document.getElementById('main-grid').addEventListener("mouseenter", this.hideHint.bind(this), false);
 
 		var c = this;
 
@@ -26,7 +34,7 @@ export default class ChainsawControl {
 	}
 
 	toggleHint(e) {
-		console.log('click')
+
 		if (!this.hintContainer.classList.contains('visible')) {
 			this.showHint(e.currentTarget);
 		} else if (this.hintContainer.classList.contains('visible') && e.currentTarget.classList.contains('active')) {
@@ -51,6 +59,7 @@ export default class ChainsawControl {
 	}
 
 	showHint(obj) {
+
 		const bcr = obj.getBoundingClientRect();
 		let leftOffset;
 
