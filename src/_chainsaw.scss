@@ -16,7 +16,7 @@ $toggleable-background: #f4f4f4;
 	position: absolute;
 	padding: 12px 16px;
 	min-width: 240px;
-	max-width: 400px;
+	max-width: 320px;
 	top: -1000px;
 	left: -1000px;
 	margin: 4px 20px;
@@ -50,30 +50,13 @@ $toggleable-background: #f4f4f4;
 	}
 
 	&:not(.hint-short) {
+		
 		&:hover {
 			&:before {
 				opacity: 1;
 			}
 		}
 
-		&:before {
-			content: "";
-			display: block;
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: 20px;
-			height: 20px;
-			border-radius: 6px;
-			cursor: pointer;
-			background-size: 26px;
-			background-position: center;
-			background-repeat: no-repeat;
-			@include hint-close-icon-color($hint-icon-color);
-			opacity: 0.5;
-
-			//background-color: #ff0000;
-		}
 	}
 }
 
@@ -85,6 +68,23 @@ $toggleable-background: #f4f4f4;
 
         &:not(.hint-short) {
             left: auto !important;
+
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 20px;
+				height: 20px;
+				border-radius: 6px;
+				cursor: pointer;
+				background-size: 26px;
+				background-position: center;
+				background-repeat: no-repeat;
+				@include hint-close-icon-color($hint-icon-color);
+				opacity: 0.5;
+			}
         }
 
         &.hint-right {

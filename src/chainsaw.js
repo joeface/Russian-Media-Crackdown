@@ -64,7 +64,7 @@ export default class ChainsawControl {
 		let leftOffset;
 
 		if (bcr.left > document.body.clientWidth / 2) {
-			leftOffset = document.body.clientWidth / 2 - 100;
+			leftOffset = document.body.clientWidth / 2 - 40;
 		} else {
 			leftOffset = bcr.left - 20;
 		}
