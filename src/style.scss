@@ -269,6 +269,13 @@ body {
         &.colornone {
             --color: var(--colorNone);
         }
+        &.nobel {
+            //--color: var(--color);
+            background-image: url(images/nobel.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
 
 
         &.white {
