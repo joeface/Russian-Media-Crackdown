@@ -56,39 +56,55 @@ body {
     grid-row-gap: 4px;
 
     > div {
+
+        --itemColor: var(--color1);
+        --itemBorderColor: var(--pink);
         font-size: .8rem;
         line-height: 1.1em;
         text-align: center;
-        opacity: .9;
-
+        opacity: .85;
         padding: 6px 4px;
-        background-color: var(--color1);
+        background-color: var(--itemColor);
+        border: 1px solid transparent;
         color: #252626;
+        cursor: pointer;
+
+        &.active,&:hover {
+            opacity: 1;
+            border-color: var(--itemBorderColor);
+        }
 
         &.color2 {
-            background-color: var(--color2);
+            --itemColor: var(--color2);
+            //background-color: var(--color2);
         }
         &.color3 {
-            background-color: var(--color3);
+            --itemColor: var(--color3);
+            //background-color: var(--color3);
         }
         &.color4 {
-            background-color: var(--color4);
+            --itemColor: var(--color4);
+            //background-color: var(--color4);
         }
         &.color5 {
-            background-color: var(--color5);
+            --itemColor: var(--color5);
+            //background-color: var(--color5);
             color: #fafafa;
         }
         &.color6 {
-            background-color: var(--color6);
+            --itemColor: var(--color6);
+            //background-color: var(--color6);
             color: #fafafa;
         }
         &.color7 {
-            background-color: var(--color7);
+            --itemColor: var(--color7);
+            //background-color: var(--color7);
             color: #fafafa;
         }
 
         &.colornone {
-            background-color: var(--colorNone);
+            --itemColor: var(--colorNone);
+            //background-color: var(--colorNone);
             color: #fafafa;
         }
     }
@@ -282,18 +298,18 @@ body {
         }
 
 
-        &.white {
+        &.colornone {
             border: none;
             height: 21px;   
             //border-top: 1px solid #fff;
             //border-right: 1px solid #fff;
             --color: var(--colorNone);
         }
-        &.white-top {
+        &.colornone-top {
             height: 20px;
             border-top: 1px solid #63697d;
         }
-        &.white-right {
+        &.colornone-right {
             border-right: 1px solid #63697d;
         }
         &.fix-corner {
@@ -308,6 +324,14 @@ body {
                 background: #63697d;
             }
         }
+
+        &.fade {
+            opacity: .2;
+            &.highlight {
+                opacity: 1;
+            }
+        }
+
     }
 }
 
