@@ -67,6 +67,10 @@
             opacity: 1;
         }
     }
+
+    .nrtk-pull {
+        opacity: .8;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -75,7 +79,7 @@
     #timeline-nav  {
         display: none;
     }
-    
+
     .container.event {
         padding: 0 15px 1rem;
 
