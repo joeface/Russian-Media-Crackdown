@@ -4,6 +4,40 @@
     padding: 0 6px;
     margin: 0 auto 20px;
 }
+
+#timeline-nav {
+    position: sticky;
+    top: 20px;
+    width: 48px;
+    height: 0;
+    margin-left: -100px;
+    opacity: .3;
+    transition: opacity .2s ease-in-out;
+    &:hover {
+        opacity: 1;
+    }
+    a {
+        display: block;
+        font-size: 1rem;
+        font-weight: 300;
+        background-color: var(--plum);
+        color: var(--bg-color);
+        padding: 2px 4px;
+        text-align: center;
+        text-decoration: none;
+        opacity: .8;
+        &:hover,&.active {
+            opacity: 1;
+        }
+        &:first-child {
+            padding-top: 4px;
+        }
+        &:last-child {
+            padding-bottom: 4px;
+        }
+    }
+}
+
 .container.event {
     padding-bottom: 4rem;
     
@@ -37,6 +71,11 @@
 
 @media (max-width: 575.98px) {
 
+
+    #timeline-nav  {
+        display: none;
+    }
+    
     .container.event {
         padding: 0 15px 1rem;
 

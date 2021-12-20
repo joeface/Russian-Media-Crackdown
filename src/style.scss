@@ -76,36 +76,28 @@ body {
 
         &.color2 {
             --itemColor: var(--color2);
-            //background-color: var(--color2);
         }
         &.color3 {
             --itemColor: var(--color3);
-            //background-color: var(--color3);
         }
         &.color4 {
             --itemColor: var(--color4);
-            //background-color: var(--color4);
         }
         &.color5 {
             --itemColor: var(--color5);
-            //background-color: var(--color5);
             color: #fafafa;
         }
         &.color6 {
             --itemColor: var(--color6);
-            //background-color: var(--color6);
             color: #fafafa;
         }
         &.color7 {
             --itemColor: var(--color7);
-            //background-color: var(--color7);
             color: #fafafa;
         }
 
         &.colornone {
             --itemColor: var(--colorNone);
-            //background-color: var(--colorNone);
-            //color: #fafafa;
         }
     }
 }
@@ -322,10 +314,8 @@ body {
 
         &.fade {
             background-color: transparent;
-            //opacity: .2;
             &.highlight {
                 background-color: var(--color);
-                //opacity: 1;
             }
         }
 
