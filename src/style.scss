@@ -9,7 +9,7 @@
     --color5: #d62d2d;
     --color6: #8c1b1b;
     --color7: #252626;
-    --colorNone: #ccc;
+    --colorNone: #ddd;
 
     --pink: #f05;
     --plum: #2d1996;
@@ -105,7 +105,7 @@ body {
         &.colornone {
             --itemColor: var(--colorNone);
             //background-color: var(--colorNone);
-            color: #fafafa;
+            //color: #fafafa;
         }
     }
 }
@@ -245,6 +245,7 @@ body {
         background-color: var(--color);
         border-top: 1px solid #bec2d1;
         border-right: 1px solid #bec2d1;
+        transition: background-color .2s ease-in-out;
 
         &.color1,&.color2,&.color3,&.color4,&.color5,&.color6,&.color7,&.nobel {
             cursor:pointer;
@@ -286,24 +287,17 @@ body {
             --color: var(--colorNone);
         }
         &.nobel {
-            //--color: var(--color);
             background-image: url(images/nobel-icon.png);
             background-size: 22px;
             background-position: center;
             background-repeat: no-repeat;
             --color: var(--bg-color);
-            //cursor: pointer;
-            &:hover {
-                //background-size: 22px;
-            }
         }
 
 
         &.colornone {
             border: none;
             height: 21px;   
-            //border-top: 1px solid #fff;
-            //border-right: 1px solid #fff;
             --color: var(--colorNone);
         }
         &.colornone-top {
@@ -327,9 +321,11 @@ body {
         }
 
         &.fade {
-            opacity: .2;
+            background-color: transparent;
+            //opacity: .2;
             &.highlight {
-                opacity: 1;
+                background-color: var(--color);
+                //opacity: 1;
             }
         }
 
