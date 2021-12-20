@@ -246,7 +246,7 @@ body {
         border-top: 1px solid #bec2d1;
         border-right: 1px solid #bec2d1;
 
-        &.color1,&.color2,&.color3,&.color4,&.color5,&.color6,&.color7 {
+        &.color1,&.color2,&.color3,&.color4,&.color5,&.color6,&.color7,&.nobel {
             cursor:pointer;
             opacity: .9;
     
@@ -288,12 +288,13 @@ body {
         &.nobel {
             //--color: var(--color);
             background-image: url(images/nobel-icon.png);
-            background-size: 20px;
+            background-size: 22px;
             background-position: center;
             background-repeat: no-repeat;
-            cursor: pointer;
+            --color: var(--bg-color);
+            //cursor: pointer;
             &:hover {
-                background-size: 22px;
+                //background-size: 22px;
             }
         }
 
