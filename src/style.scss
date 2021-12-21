@@ -330,6 +330,13 @@ body {
         margin: 6px -15px;
     }
 
+    #main-grid {
+        .logo {
+            max-width: 120px;
+            min-width: 100px;
+        }
+    }
+
     #grid-legend {
         margin: 0 -20px 20px;
     }
