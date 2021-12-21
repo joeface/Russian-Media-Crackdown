@@ -1,6 +1,6 @@
 
 .timeline {
-    max-width: 600px;
+    //max-width: 600px;
     padding: 0 6px;
     margin: 0 auto 20px;
 }
@@ -77,6 +77,10 @@
 }
 
 @media (max-width: 575.98px) {
+
+    .timeline {
+        margin: 0 -20px 20px;
+    }
 
 
     #timeline-nav  {
