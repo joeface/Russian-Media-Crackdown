@@ -334,11 +334,20 @@ body {
     }
 }
 
+#nrtk-hint-container {
+    border-radius: 0;
+}
+.nrtk-hint {
+    margin-right: 0;
+    &::after {
+        font-size: 1.6rem;
+    }
+}
 @media (max-width: 575.98px) {
     .foreign-agent {
         font-size: 2.2rem;
     }
-    
+
     .grid-container {
         overflow-y: auto;
         overflow-x: scroll;
