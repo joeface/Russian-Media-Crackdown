@@ -74,7 +74,24 @@
 
     .nrtk-pull {
         opacity: .8;
+        background-color: transparent;
+        color: var(--pink);
+        border-radius: 0;
+        border: 1px solid var(--pink);
+        span {
+            color:var(--pink);
+        }
+        span:after {
+
+            margin-left: 12px;
+            margin-top: 8px;
+            animation: none;
+            -webkit-animation: none;
+            -moz-animation: none;
+            border-color: var(--pink);
+        }
     }
+
 }
 
 @media (max-width: 575.98px) {
