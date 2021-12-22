@@ -72,12 +72,19 @@
         }
     }
 
+    .nrtk-toggleable {
+        border-radius: 0;
+    }
+    
     .nrtk-pull {
-        opacity: .8;
+        opacity: .7;
         background-color: transparent;
         color: var(--pink);
         border-radius: 0;
         border: 1px solid var(--pink);
+        &:hover {
+            opacity: 1;
+        }
         span {
             color:var(--pink);
         }
