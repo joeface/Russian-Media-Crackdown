@@ -43,6 +43,10 @@
 
 .container.event {
     padding-bottom: 4rem;
+
+    &.last {
+        padding-bottom: 2rem;
+    }
     
     .date {
         font-weight: 400;
@@ -75,7 +79,7 @@
     .nrtk-toggleable {
         border-radius: 0;
     }
-    
+
     .nrtk-pull {
         opacity: .7;
         background-color: transparent;
